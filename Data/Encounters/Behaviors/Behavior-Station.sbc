@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Behavior-Station</SubtypeId>
+      </Id>
+      <Description>
+
+		  [RivalAI Behavior]
+
+		  [BehaviorName:Passive]
+
+		  [Triggers:PlayerNearStation]
+		  [Triggers:Orks-Trigger-DeployScout]
+		  [Triggers:Orks-Trigger-CallReinforcements]
+		  //Triggers:Orks-Trigger-StationDefeat]
+
+	  </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

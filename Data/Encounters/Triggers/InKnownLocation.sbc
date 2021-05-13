@@ -1,0 +1,111 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--InKnownLocation-->
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-InKnownLocation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:PlayerKnownLocation]
+        [MinCooldownMs:3000]
+        [MaxCooldownMs:3001]
+        [StartsReady:false]
+        [MaxActions:1]
+        [Actions:Orks-Action-InKnownLocation-A]
+        [Actions:Orks-Action-InKnownLocation-B]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-InKnownLocation-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:Orks-Trigger-DamagedRetreatLight]
+        [DisableTriggerNames:Orks-Trigger-InKnownLocation]
+
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-InKnownLocation-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [Chance:100]
+
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-InKnownLocation]
+
+        [BroadcastCommandProfiles:true]
+        [CommandProfileIds:Orks-Command-InKnownLocation]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Chat-InKnownLocation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Ork Flyboy]
+        [Color:Red]
+
+        [ChatMessages:Dis is where dem humie'z were last time.]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Th' boyz arr back in town!.]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Command-InKnownLocation</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Command]
+
+        [CommandCode:OrksInKnownLocation]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

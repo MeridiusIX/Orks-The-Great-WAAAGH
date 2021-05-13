@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-DamagedRetreatLight</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Damage]
+        [DamageTypes:Any]
+
+        [MinCooldownMs:5000]
+        [MaxCooldownMs:5001]
+        [StartsReady:false]
+
+        [MaxActions:1]
+
+        [Conditions:Orks-Condition-DamagedRetreatLight]
+        [ConditionCheckResetsTimer:true]
+        [Actions:Orks-Action-DamagedRetreat]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Condition-DamagedRetreatLight</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Condition]
+
+        [UseConditions:true]
+
+        [UseAccumulatedDamageWatcher:true]
+        [MinAccumulatedDamage:100000]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

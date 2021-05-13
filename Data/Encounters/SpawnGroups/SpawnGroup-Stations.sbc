@@ -1,0 +1,229 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Station-AirMekWorkshop</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [PlanetaryInstallation:true]
+        [PlanetaryInstallationType:Large]
+        [PlanetaryInstallationChance:33]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+        [EraseIngameScripts:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:20000]
+        [ThreatScoreMinimum:999]
+
+        [ReplaceArmorBlocksWithModules:true]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Drill-Large]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Jetpack-Large]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) Air-Mek Workshop">
+          <Position>
+            <X>0.0</X>
+            <Y>-20.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>0</Speed>
+          <Behaviour>Orks-Behavior-Station</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Station-MekbossStation</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [SpaceRandomEncounter:true]
+        [RandomEncounterChance:33]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+        [EraseIngameScripts:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:20000]
+        [ThreatScoreMinimum:999]
+
+        [ReplaceArmorBlocksWithModules:true]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Jetpack-Large]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) Mekboss Station">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>0</Speed>
+          <Behaviour>Orks-Behavior-Station</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Station-ScrapFort</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [PlanetaryInstallation:true]
+        [PlanetaryInstallationType:Large]
+        [PlanetaryInstallationChance:33]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+        [EraseIngameScripts:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:20000]
+        [ThreatScoreMinimum:999]
+
+        [ReplaceArmorBlocksWithModules:true]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Drill-Large]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Jetpack-Large]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) Scrap Fort">
+          <Position>
+            <X>0.0</X>
+            <Y>2.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>Orks-Behavior-Station</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Station-ScrappaHut</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [PlanetaryInstallation:true]
+        [PlanetaryInstallationType:Large]
+        [PlanetaryInstallationChance:33]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+        [EraseIngameScripts:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:20000]
+        [ThreatScoreMinimum:999]
+
+        [ReplaceArmorBlocksWithModules:true]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Drill-Large]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Jetpack-Large]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) Scrappa Hut">
+          <Position>
+            <X>0.0</X>
+            <Y>26.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>Orks-Behavior-Station</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Station-WAAAGHTower</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [PlanetaryInstallation:true]
+        [PlanetaryInstallationType:Medium]
+        [PlanetaryInstallationChance:33]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+        [EraseIngameScripts:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:20000]
+        [ThreatScoreMinimum:666]
+
+        [ReplaceArmorBlocksWithModules:true]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Drill-Large]
+        [ModulesForArmorReplacement:MyObjectBuilder_RadioAntenna/MES-Suppressor-Jetpack-Large]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) WAAAGH Tower">
+          <Position>
+            <X>0.0</X>
+            <Y>11.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>Orks-Behavior-Station</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+</Definitions>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityComponents>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Trigger-PlayerNearStation</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Trigger]
+
+				[UseTrigger:true]
+				[Type:PlayerNear]
+				[TargetDistance:1500]
+
+				[StartsReady:true]
+
+				[MaxActions:1]
+
+				[Actions:Orks-Action-PlayerNearStation]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Action-PlayerNearStation</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Action]
+
+				[UseChatBroadcast:true]
+				[ChatData:Orks-Chat-PlayerNearStation]
+
+				[ResetCooldownTimeOfTriggers:true]
+				[ResetTriggerCooldownNames:Orks-Trigger-CallReinforcements]
+
+				[EnableTriggers:true]
+				[EnableTriggerNames:Orks-Trigger-CallReinforcements]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Chat-PlayerNearStation</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:1]
+				[BroadcastRandomly:true]
+				[Author:Ork Station]
+				[Color:Red]
+
+				[ChatMessages:Oomies are comin', call da boyz!]
+				[BroadcastChatType:Chat]
+				[ChatAudio:ArcHudQuestlogDetail]
+
+				[ChatMessages:Dis place haz oomies, we need moar boyz!]
+				[BroadcastChatType:Chat]
+				[ChatAudio:ArcHudQuestlogDetail]
+
+			</Description>
+		</EntityComponent>
+		
+	</EntityComponents>
+</Definitions>

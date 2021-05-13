@@ -1,0 +1,96 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--GrindDamage-->
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-GrindDamage</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:Damage]
+        [DamageTypes:Grind]
+        [MinCooldownMs:15000]
+        [MaxCooldownMs:15001]
+        [StartsReady:true]
+        [MaxActions:-1]
+        [ActionExecution:Random]
+
+        [Actions:Orks-Action-GrindDamage-A]
+        [Actions:Orks-Action-GrindDamage-B]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-GrindDamage-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [BarrelRoll:true]
+
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-GrindDamage]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-GrindDamage-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [HeavyYaw:true]
+
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-GrindDamage]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Chat-GrindDamage</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Ork Flyboy]
+        [Color:Red]
+
+        [ChatMessages:Quit cuttin' ma ship!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Git off ma hull ya dirty humie!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-TriggerGroup-Retreat</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI TriggerGroup]
+
+        [Triggers:Orks-Trigger-RetreatPlayerNear]
+        [Triggers:Orks-Trigger-RetreatPlayerFar]
+        [Triggers:Orks-Trigger-InKnownLocation]
+        [Triggers:Orks-Trigger-InKnownLocationSimple]
+        [Triggers:Orks-Trigger-RetreatSuccess]
+        [Triggers:Orks-Trigger-DamagedRetreat]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-TriggerGroup-Broadside</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI TriggerGroup]
+
+        [Triggers:Orks-Trigger-BroadsideNear]
+        [Triggers:Orks-Trigger-BroadsideFar]
+        [Triggers:Orks-Trigger-BroadsideToggle]
+
+      </Description>
+
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-TriggerGroup-HydrogenMan</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI TriggerGroup]
+
+        [Triggers:Orks-Trigger-HydrogenManFar]
+        [Triggers:Orks-Trigger-HydrogenManNear]
+
+      </Description>
+
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

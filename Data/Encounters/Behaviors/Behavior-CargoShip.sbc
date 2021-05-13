@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Behavior-CargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:CargoShip]
+
+        [AutopilotData:Orks-AutoPilot-CargoShip]
+
+        [Triggers:Orks-Trigger-PassiveSpawningCarrier]
+        [Triggers:Orks-Trigger-PlayerCarrierApproach]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-AutoPilot-CargoShip</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:50]
+        [FlyLevelWithGravity:true]
+
+        [IdealMinSpeed:5]
+        [IdealMaxSpeed:15]
+        [MaxSpeedTolerance:2]
+
+        [MinimumPlanetAltitude:1000]
+        [IdealPlanetAltitude:1200]
+
+        [WaypointTolerance:50]
+        [WaypointWaitTimeTrigger:120]
+
+        [MinAngleForLeveledDescent:135]
+        [MaxAngleForLeveledAscent:90]
+
+        [UseVelocityCollisionEvasion:false]
+        [LimitRotationSpeed:true]
+        [MaxRotationMagnitude:0.2]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

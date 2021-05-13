@@ -1,0 +1,80 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--NewTarget-->
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-NewTarget</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerA]
+        [MinCooldownMs:120000]
+        [MaxCooldownMs:120001]
+        [StartsReady:true]
+        [MaxActions:-1]
+        [Actions:Orks-Action-NewTarget]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-NewTarget</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-NewTarget]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:Orks-Trigger-InKnownLocation]
+        [DisableTriggerNames:Orks-Trigger-InKnownLocationSimple]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Chat-NewTarget</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Ork Flyboy]
+        [Color:Red]
+
+        [ChatMessages:Fill em full ov holes!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Show em who 'az da best Dakka!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Got some humies 'ere. Let's krump em!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Behavior-Boss</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Hunter]
+
+        [AutopilotData:Orks-Autopilot-LargeShipHunter-A]
+        [SecondaryAutopilotData:Orks-Autopilot-LargeShipHunter-B]
+
+        [TargetData:Orks-Target-Main-B]
+        [OverrideTargetData:Orks-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [Triggers:Orks-Trigger-GrindDamage]
+        [Triggers:Orks-Trigger-NewTarget]
+        [Triggers:Orks-Trigger-RandomRamming]
+        [Triggers:Orks-Trigger-StationDefeat]
+
+        [TriggerGroups:Orks-TriggerGroup-HydrogenMan]
+
+        [UseBarrageFire:true]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

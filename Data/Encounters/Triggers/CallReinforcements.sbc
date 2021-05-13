@@ -1,0 +1,137 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityComponents>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Trigger-CallReinforcements</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Trigger]
+
+				[UseTrigger:true]
+				[Type:Timer]
+				[MinCooldownMs:900000]
+				[MaxCooldownMs:900001]
+				[StartsReady:false]
+
+				[MaxActions:1]
+				[Actions:Orks-Action-CallReinforcements]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Action-CallReinforcements</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Action]
+
+				[SpawnEncounter:true]
+				[Spawner:Orks-Spawn-CallReinforcements-Atmo]
+				[Spawner:Orks-Spawn-CallReinforcements-Space]
+
+				[UseChatBroadcast:true]
+				[ChatData:Orks-Chat-CallReinforcements]
+
+				[CreateKnownPlayerArea:true]
+				[KnownPlayerAreaRadius:8000]
+				[KnownPlayerAreaTimer:60]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Spawn-CallReinforcements-Atmo</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Spawn]
+
+				[UseSpawn:true]
+
+				[SpawningType:PlanetaryCargoShip]
+				[StartsReady:true]
+				[SpawnMinCooldown:1]
+				[SpawnMinCooldown:2]
+				[MaxSpawns:1]
+
+				[SpawnGroups:Orks-SpawnGroup-Ship-DakkaJet]
+				[SpawnGroups:Orks-SpawnGroup-Ship-DeffShip]
+				[SpawnGroups:Orks-SpawnGroup-Ship-FightaBomba]
+				[SpawnGroups:Orks-SpawnGroup-Ship-HeavyFighta]
+				[SpawnGroups:Orks-SpawnGroup-Ship-LiteKrooza]
+				[SpawnGroups:Orks-SpawnGroup-Ship-RavagerAttackShip]
+				[SpawnGroups:Orks-SpawnGroup-Ship-Shootaboat]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Spawn-CallReinforcements-Space</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Spawn]
+
+				[UseSpawn:true]
+
+				[SpawningType:SpaceCargoShip]
+				[StartsReady:true]
+				[SpawnMinCooldown:1]
+				[SpawnMinCooldown:2]
+				[MaxSpawns:1]
+
+				[SpawnGroups:Orks-SpawnGroup-Ship-BlastaBarge]
+				[SpawnGroups:Orks-SpawnGroup-Ship-DeffShip]
+				[SpawnGroups:Orks-SpawnGroup-Ship-LiteKrooza]
+				[SpawnGroups:Orks-SpawnGroup-Ship-RavagerAttackShip]
+				[SpawnGroups:Orks-SpawnGroup-Ship-SavageGunship]
+				[SpawnGroups:Orks-SpawnGroup-Ship-Shootaboat]
+				[SpawnGroups:Orks-SpawnGroup-Ship-VoidFighta]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Chat-DeployScout</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:5]
+				[BroadcastRandomly:true]
+				[Author:Ork Station]
+				[Color:Red]
+
+				[ChatMessages:Ya gonna get it now!]
+				[BroadcastChatType:Chat]
+				[ChatAudio:ArcHudQuestlogDetail]
+
+				[ChatMessages:Da boyz ar gonna smash ya ta bits!]
+				[BroadcastChatType:Chat]
+				[ChatAudio:ArcHudQuestlogDetail]
+
+			</Description>
+		</EntityComponent>
+		
+	</EntityComponents>
+</Definitions>

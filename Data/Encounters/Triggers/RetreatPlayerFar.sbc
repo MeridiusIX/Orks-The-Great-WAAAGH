@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-RetreatPlayerFar</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:false]
+        [Type:PlayerFar]
+        [TargetDistance:2000]
+
+        [StartsReady:true]
+
+        [MaxActions:1]
+
+        [Actions:Orks-Action-RetreatPlayerFar]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-RetreatPlayerFar</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [Chance:100]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:Orks-Trigger-RetreatPlayerNear]
+        [DisableTriggerNames:Orks-Trigger-RetreatPlayerFar]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

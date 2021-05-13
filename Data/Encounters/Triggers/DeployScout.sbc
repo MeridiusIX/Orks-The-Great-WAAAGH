@@ -1,0 +1,169 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Trigger-DeployScout</SubtypeId>
+		  </Id>
+		  <Description>
+
+			  [RivalAI Trigger]
+
+			  [UseTrigger:true]
+			  [Type:Timer]
+			  [MinCooldownMs:900000]
+			  [MaxCooldownMs:1200000]
+			  [StartsReady:false]
+
+			  [MaxActions:-1]
+			  [Actions:Orks-Action-DeployScout]
+
+		  </Description>
+
+	  </EntityComponent>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Action-DeployScout</SubtypeId>
+		  </Id>
+		  <Description>
+
+			  [RivalAI Action]
+
+			  [SpawnEncounter:true]
+			  [Spawner:Orks-Spawn-DeployScout-MekWorkshop]
+			  [Spawner:Orks-Spawn-DeployScout-MekbossStation]
+			  [Spawner:Orks-Spawn-DeployScout-ScrapFort]
+
+			  [UseChatBroadcast:true]
+			  [ChatData:Orks-Chat-DeployScout]
+
+		  </Description>
+
+	  </EntityComponent>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Spawn-DeployScout-MekWorkshop</SubtypeId>
+		  </Id>
+		  <Description>
+
+			  [RivalAI Spawn]
+
+			  [UseSpawn:true]
+
+			  [StartsReady:true]
+			  [SpawnMinCooldown:1]
+			  [SpawnMinCooldown:2]
+			  [MaxSpawns:-1]
+
+			  [ParentGridNameRequirement:(NPC-ORK) Air-Mek Workshop]
+
+			  [SpawnGroups:Orks-SpawnGroup-Ship-DakkaJet]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-FightaBomba]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-HeavyFighta]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-VoidFighta]
+
+			  [UseRelativeSpawnPosition:true]
+			  [RelativeSpawnOffset:{X:-79.30 Y:20.57 Z:-8.42}]
+			  [RelativeSpawnVelocity:{X:0 Y:85 Z:0}]
+
+		  </Description>
+
+	  </EntityComponent>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Spawn-DeployScout-MekbossStation</SubtypeId>
+		  </Id>
+		  <Description>
+
+			  [RivalAI Spawn]
+
+			  [UseSpawn:true]
+
+			  [StartsReady:true]
+			  [SpawnMinCooldown:1]
+			  [SpawnMinCooldown:2]
+			  [MaxSpawns:-1]
+
+			  [ParentGridNameRequirement:(NPC-ORK) Mekboss Station]
+
+			  [SpawnGroups:Orks-SpawnGroup-Ship-DakkaJet]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-FightaBomba]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-HeavyFighta]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-VoidFighta]
+
+			  [UseRelativeSpawnPosition:true]
+			  [RelativeSpawnOffset:{X:1.36 Y:28.04 Z:-19.40}]
+			  [RelativeSpawnVelocity:{X:0 Y:85 Z:0}]
+
+		  </Description>
+
+	  </EntityComponent>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Spawn-DeployScout-ScrapFort</SubtypeId>
+		  </Id>
+		  <Description>
+
+			  [RivalAI Spawn]
+
+			  [UseSpawn:true]
+
+			  [StartsReady:true]
+			  [SpawnMinCooldown:1]
+			  [SpawnMinCooldown:2]
+			  [MaxSpawns:-1]
+
+			  [ParentGridNameRequirement:(NPC-ORK) Scrap Fort]
+
+			  [SpawnGroups:Orks-SpawnGroup-Ship-DakkaJet]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-FightaBomba]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-HeavyFighta]
+			  [SpawnGroups:Orks-SpawnGroup-Ship-VoidFighta]
+
+			  [UseRelativeSpawnPosition:true]
+			  [RelativeSpawnOffset:{X:-0.47 Y:26.69 Z:31.48}]
+			  [RelativeSpawnVelocity:{X:0 Y:85 Z:0}]
+
+		  </Description>
+
+	  </EntityComponent>
+
+	  <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+		  <Id>
+			  <TypeId>Inventory</TypeId>
+			  <SubtypeId>Orks-Chat-DeployScout</SubtypeId>
+		  </Id>
+		  <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:5]
+        [BroadcastRandomly:true]
+        [Author:Ork Station]
+        [Color:Red]
+
+        [ChatMessages:Der mite be 'oomies around. Find 'em and smash 'em!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Let's find some 'oomies to fite!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+	  </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

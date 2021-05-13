@@ -1,0 +1,76 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--RandomRamming-->
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-RandomRamming</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:TargetNear]
+        [TargetDistance:600]
+        [MinCooldownMs:60000]
+        [MaxCooldownMs:120000]
+        [StartsReady:true]
+
+        [MaxActions:-1]
+        [Actions:Orks-Action-RandomRamming]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-RandomRamming</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [Chance:8]
+        [Ramming:true]
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-RandomRamming]
+
+      </Description>
+
+    </EntityComponent>
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Chat-RandomRamming</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Ork Flyboy]
+        [Color:Red]
+
+        [ChatMessages:Eva' play chicken?]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Um gunna bash ya's!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

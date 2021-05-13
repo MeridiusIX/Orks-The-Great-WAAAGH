@@ -1,0 +1,83 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-RetreatPlayerNear</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:false]
+        [Type:PlayerNear]
+        [TargetDistance:2000]
+
+        [StartsReady:true]
+
+        [MaxActions:1]
+
+        [Actions:Orks-Action-RetreatPlayerNear]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-RetreatPlayerNear</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [Chance:100]
+
+        [Retreat:true]
+
+        [UseChatBroadcast:true]
+        [ChatData:Orks-Chat-RetreatPlayerNear]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:Orks-Trigger-RetreatPlayerNear]
+        [DisableTriggerNames:Orks-Trigger-RetreatPlayerFar]
+
+        [EnableTriggers:true]
+        [EnableTriggerNames:Orks-Trigger-RetreatSuccess]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Chat-RetreatPlayerNear</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Chat]
+
+        [UseChat:true]
+        [StartsReady:true]
+        [MaxChats:-1]
+        [BroadcastRandomly:true]
+        [Author:Ork Flyboy]
+        [Color:Red]
+
+        [ChatMessages:You'z tougha den you looks... Um gunna bring da boyz wiv me nex' time!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+        [ChatMessages:Need moar boyz, deez humies r' tuff!]
+        [BroadcastChatType:Chat]
+        [ChatAudio:ArcHudQuestlogDetail]
+
+      </Description>
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>

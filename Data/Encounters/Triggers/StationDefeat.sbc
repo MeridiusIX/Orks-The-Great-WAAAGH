@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityComponents>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Trigger-StationDefeat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Trigger]
+
+				[UseTrigger:true]
+				[Type:Compromised]
+				[StartsReady:true]
+				[MaxActions:1]
+				[Actions:Orks-Action-StationDefeat]
+
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Action-StationDefeat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Action]
+
+				[UseChatBroadcast:true]
+				[ChatData:Orks-Chat-StationDefeat]
+
+				[RemoveKnownPlayerArea:true]
+
+			</Description>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Orks-Chat-StationDefeat</SubtypeId>
+			</Id>
+			<Description>
+
+				[RivalAI Chat]
+
+				[UseChat:true]
+				[StartsReady:true]
+				[MaxChats:1]
+				[BroadcastRandomly:false]
+				[Author:Ork Station]
+				[Color:Red]
+
+				[ChatMessages:Orks Influence In Area Decreased.]
+				[BroadcastChatType:Notify]
+
+			</Description>
+		</EntityComponent>
+		
+	</EntityComponents>
+</Definitions>

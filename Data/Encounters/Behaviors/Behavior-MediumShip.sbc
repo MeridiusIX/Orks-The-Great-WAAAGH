@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Behavior-MediumShipHunter</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Behavior]
+
+        [BehaviorName:Hunter]
+
+        [AutopilotData:Orks-Autopilot-MediumShipHunter-A]
+        [SecondaryAutopilotData:Orks-Autopilot-MediumShipHunter-B]
+
+        [TargetData:Orks-Target-Main-A]
+        [OverrideTargetData:Orks-Target-Main-B]
+
+        [EngageOnTargetLineOfSight:true]
+        [EngageOnWeaponActivation:true]
+
+        [Triggers:Orks-Trigger-DamagedRetreatMedium]
+        [Triggers:Orks-Trigger-GrindDamage]
+        [Triggers:Orks-Trigger-NewTarget]
+        [Triggers:Orks-Trigger-RandomRamming]
+
+        [TriggerGroups:Orks-TriggerGroup-Retreat]
+        [TriggerGroups:Orks-TriggerGroup-HydrogenMan]
+
+        [UseBarrageFire:true]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Autopilot-MediumShipHunter-A</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:true]
+        [WaypointTolerance:25]
+        [IdealMinSpeed:10]
+        [IdealMaxSpeed:20]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:150]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:1000]
+        [StrafeMaxDurationMs:1500]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Autopilot-MediumShipHunter-B</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Autopilot]
+
+        [DisableInertiaDampeners:false]
+        [FlyLevelWithGravity:false]
+        [WaypointTolerance:40]
+        [IdealMinSpeed:20]
+        [IdealMaxSpeed:100]
+        [MaxSpeedTolerance:5]
+        [SlowDownOnWaypointApproach:true]
+        [ExtraSlowDownDistance:250]
+
+        [AllowStrafing:true]
+        [StrafeMinDurationMs:3000]
+        [StrafeMaxDurationMs:6000]
+
+        [StrafeMinCooldownMs:4000]
+        [StrafeMaxCooldownMs:6000]
+
+        [StrafeMinimumTargetDistance:500]
+        [StrafeSpeedCutOff:45]
+        [StrafeDistanceCutOff:150]
+
+        [EngageDistanceSpace:700]
+        [EngageDistancePlanet:700]
+        [DisengageDistanceSpace:800]
+        [DisengageDistancePlanet:800]
+
+      </Description>
+
+    </EntityComponent>
+
+  </EntityComponents>
+</Definitions>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SpawnGroups>
+
+    <SpawnGroup>
+      <Id>
+        <TypeId>SpawnGroupDefinition</TypeId>
+        <SubtypeId>Orks-SpawnGroup-Test</SubtypeId>
+      </Id>
+      <Description>
+
+        [Modular Encounters SpawnGroup]
+
+        [DisableDampeners:false]
+
+        [SpaceCargoShip:true]
+        [SpaceCargoShipChance:250]
+
+        [AtmosphericCargoShip:true]
+        [AtmosphericCargoShipChance:1]
+
+        [GravityCargoShip:true]
+        [GravityCargoShipChance:20]
+
+        [ChanceCeiling:250]
+
+        [FactionOwner:ORKS]
+        [ReplenishSystems:true]
+        [RandomizeWeapons:true]
+
+        [UseRivalAi:true]
+        [RivalAiReplaceRemoteControl:true]
+
+        [UseBlockReplacerProfile:true]
+        [IgnoreGlobalBlockReplacer:true]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Ion]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Atmo]
+        [BlockReplacerProfileNames:MES-NpcThrusters-Hydro]
+
+        [ConfigureSpecialNpcThrusters:true]
+        [RestrictNpcIonThrust:true]
+        [NpcIonThrustPowerMultiply:0.0001]
+        [NpcAtmoThrustPowerMultiply:0.0001]
+        [NpcHydroThrustPowerMultiply:0.0001]
+
+        [MaxGravity:1.0]
+
+        [UseThreatLevelCheck:true]
+        [ThreatLevelCheckRange:10000]
+        [ThreatScoreMinimum:666]
+
+      </Description>
+      <IsPirate>true</IsPirate>
+      <Frequency>5.0</Frequency>
+      <Prefabs>
+        <Prefab SubtypeId="(NPC-ORK) Shootaboat">
+          <Position>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+          </Position>
+          <Speed>25</Speed>
+          <Behaviour>Orks-Behavior-LargeShipHunter</Behaviour>
+        </Prefab>
+      </Prefabs>
+    </SpawnGroup>
+
+  </SpawnGroups>
+</Definitions>

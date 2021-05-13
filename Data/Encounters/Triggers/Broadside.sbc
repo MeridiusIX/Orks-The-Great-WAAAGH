@@ -1,0 +1,139 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <EntityComponents>
+
+    <!--Broadside Near-->
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-BroadsideNear</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerE]
+
+        [StartsReady:true]
+        [MaxActions:-1]
+        [ActionExecution:Random]
+
+        [Actions:Orks-Action-BroadsideNearRight]
+        [Actions:Orks-Action-BroadsideNearLeft]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-BroadsideNearRight</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeRotationDirection:true]
+        [RotationDirection:Right]
+
+        [EnableTriggers:true]
+        [EnableTriggerNames:Orks-Trigger-BroadsideToggle]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-BroadsideNearLeft</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeRotationDirection:true]
+        [RotationDirection:Left]
+
+        [EnableTriggers:true]
+        [EnableTriggerNames:Orks-Trigger-BroadsideToggle]
+
+      </Description>
+
+    </EntityComponent>
+
+    <!--Broadside Far-->
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-BroadsideFar</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:true]
+        [Type:BehaviorTriggerF]
+
+        [StartsReady:true]
+        [MaxActions:-1]
+
+        [Actions:Orks-Action-BroadsideFar]
+
+      </Description>
+
+    </EntityComponent>
+
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Action-BroadsideFar</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Action]
+
+        [ChangeRotationDirection:true]
+        [RotationDirection:Forward]
+
+        [DisableTriggers:true]
+        [DisableTriggerNames:Orks-Trigger-BroadsideToggle]
+
+      </Description>
+
+    </EntityComponent>
+
+    <!--Broadside Toggle-->
+    
+    <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+      <Id>
+        <TypeId>Inventory</TypeId>
+        <SubtypeId>Orks-Trigger-BroadsideToggle</SubtypeId>
+      </Id>
+      <Description>
+
+        [RivalAI Trigger]
+
+        [UseTrigger:false]
+        [Type:Timer]
+
+        [MinCooldownMs:30000]
+        [MaxCooldownMs:60000]
+
+        [StartsReady:false]
+        [MaxActions:-1]
+        [ActionExecution:Random]
+
+        [Actions:Orks-Action-BroadsideNearRight]
+        [Actions:Orks-Action-BroadsideNearLeft]
+
+      </Description>
+
+    </EntityComponent>
+    
+  </EntityComponents>
+</Definitions>
